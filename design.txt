@@ -1,0 +1,11 @@
+The design of application is simply based on spring core fundamentals. 
+
+There is one tester class (application context class basically) with main method as the entry point, which creates an instance of the Orders.java pojo class and calls the sortOrder method to sort the orders present in source file.
+
+Orders is an entity or we can simply call it as a pojo class, where I used constructor based DI with processOrders interface.
+
+processOrders is the interface which I used for DI. It has single abstract method sortOrders with two parameters: source file location and destination file location strings.
+
+sortFile is an implementation of processOrders interface in service package. sortFile overrides the sortOrders method and read the data from source file line by line and stores each line in a list. After reading the file, sort the list lexograhically using collections sort method and write the sorted list to the destination file.
+
+
